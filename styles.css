@@ -1,0 +1,106 @@
+/* style.css for Aggie Cuts Website */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #2c3e50
+}
+
+a:hover {
+  color: #e67e22;
+}
+
+/* Header and Navigation */
+/* Chang color and space around text */
+#main-header {
+  background-color: #1e272e;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#main-header h1 {
+  margin: 0;
+}
+
+.navbar {
+  background-color: #34495e;
+  padding: 10px 0;
+}
+/* Removes bullet points */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #f39c12;
+}
+
+/* Main Content */
+main {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.intro img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+h2, h3 {
+  color: #2c3e50;
+}
+
+/* Footer */
+#main-footer {
+  background-color: #1e272e;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+#main-footer a {
+  color: #f1c40f;
+}
+
+/* Gallery Layout */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 300px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
