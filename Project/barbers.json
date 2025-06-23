@@ -2,16 +2,24 @@
   {
     "name": "Mike",
     "specialty": "Skin Fades, Tapers",
-    "photo": "images/mike.jpg"
+    "phone": "7041231212"
   },
   {
     "name": "Jamal",
     "specialty": "Beards & Shaves",
-    "photo": "images/jamal.jpg"
+    "phone": "7041234545"
+
   },
   {
     "name": "Sasha",
     "specialty": "Scissor Cuts, Kids Cuts",
-    "photo": "images/sasha.jpg"
+    "phone": "7041236663"
+
+  },
+  {
+    "name": "Kevin",
+    "specialty": "Braids, Twists",
+    "phone": "704125333"
+
   }
 ]
