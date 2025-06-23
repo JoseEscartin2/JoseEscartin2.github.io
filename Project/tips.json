@@ -1,12 +1,12 @@
 [
-  "Wash your face twice a day with a gentle cleanser.",
-  "Use a moisturizer with SPF every morning.",
-  "Get a haircut every 3–4 weeks to maintain shape.",
-  "Trim your beard regularly and use beard oil.",
-  "Don’t forget to exfoliate once a week.",
-  "Use lip balm to prevent dry, cracked lips.",
-  "Clean your hairbrush regularly.",
-  "Keep your nails trimmed and clean.",
-  "Replace your razor blades often.",
-  "Stay hydrated for healthier skin and hair."
+  {
+    "name": "Mike",
+    "specialty": "Fades",
+    "photo": "mike.jpg"
+  },
+  {
+    "name": "Jamal",
+    "specialty": "Beards",
+    "photo": "jamal.jpg"
+  }
 ]

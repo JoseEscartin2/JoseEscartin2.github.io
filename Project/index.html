@@ -36,30 +36,88 @@
       <h3>What We Offer</h3>
       <p>Aggie Cuts specializes in modern and traditional haircuts, beard trims, hot towel shaves, and more. Walk-ins and appointments welcome!</p>
     </section>
-    <h1>Grooming Tip of the Day</h1>
-    <button onclick="getGroomingTip()">Get Tip</button>
-    <div id="tip-result">Click the button to see a tip.</div>
-
-    <script type="text/javascript">
-      var xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = getGroomingTip('')
-      function getGroomingTip() {
-        if(xhr.onreadyState<4) {
-          return;
-        }
-
-        if(xhr.status !== 200) {
-          return
-        }
-        console.log(xhr.responseText);
-       } 
-       xhr.open('GET', 'tips.json', true);
-       xhr.send('');
-    </script>
+    
 
 
+    <section class="barbers">
+  <h2>Meet Our Barbers</h2>
+
+  <!-- 🔍 Search input + button -->
+  <div style="margin-bottom: 1em;">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search by name or specialty..."
+      style="padding: 0.5em; width: 100%; max-width: 300px;"
+    />
+    <button onclick="filterBarbers()" style="padding: 0.5em 1em; margin-left: 0.5em;">Search</button>
+  </div>
+
+  <div id="barber-list" class="barber-grid">
+    <!-- Profiles will be loaded here -->
+  </div>
+</section>
 
 
+
+
+
+
+  <script>
+  let allBarbers = [];
+
+  function loadBarberProfiles() {
+    fetch('barbers.json')
+      .then(response => {
+        if (!response.ok) throw new Error("Could not fetch barbers");
+        return response.json();
+      })
+      .then(barbers => {
+        allBarbers = barbers;
+        displayBarbers(barbers);
+      })
+      .catch(error => {
+        document.getElementById("barber-list").textContent = "Error loading barbers.";
+        console.error("Fetch error:", error);
+      });
+  }
+
+  function displayBarbers(barbers) {
+    const container = document.getElementById("barber-list");
+    container.innerHTML = "";
+
+    if (barbers.length === 0) {
+      container.innerHTML = "<p>No matching barbers found.</p>";
+      return;
+    }
+
+    barbers.forEach(barber => {
+      const card = document.createElement("div");
+      card.className = "barber-card";
+
+      card.innerHTML = `
+        <img src="${barber.photo}" alt="${barber.name}">
+        <h4>${barber.name}</h4>
+        <p><em>${barber.specialty}</em></p>
+      `;
+
+      container.appendChild(card);
+    });
+  }
+
+  function filterBarbers() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+
+    const filtered = allBarbers.filter(barber =>
+      barber.name.toLowerCase().includes(query) ||
+      barber.specialty.toLowerCase().includes(query)
+    );
+
+    displayBarbers(filtered);
+  }
+
+  document.addEventListener("DOMContentLoaded", loadBarberProfiles);
+</script>
 
 
 

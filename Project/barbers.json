@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Mike",
+    "specialty": "Skin Fades, Tapers",
+    "photo": "images/mike.jpg"
+  },
+  {
+    "name": "Jamal",
+    "specialty": "Beards & Shaves",
+    "photo": "images/jamal.jpg"
+  },
+  {
+    "name": "Sasha",
+    "specialty": "Scissor Cuts, Kids Cuts",
+    "photo": "images/sasha.jpg"
+  }
+]

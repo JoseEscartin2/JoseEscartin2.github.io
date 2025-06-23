@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Calibri, sans-serif;
   background-color: #fdfdfd;
   color: #333;
   line-height: 1.6;
@@ -31,7 +31,7 @@ a:hover {
 }
 
 .navbar {
-  background-color: #34495e;
+  background-color: red;
   padding: 10px 0;
 }
 /* Removes bullet points */
