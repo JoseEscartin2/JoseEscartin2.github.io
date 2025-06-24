@@ -1,26 +1,26 @@
 /* style.css for Aggie Cuts Website */
 
+/* === Global Styles === */
 body {
   margin: 0;
-  font-family: Calibri, sans-serif;
-  background-color: #fdfdfd;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font for modern feel */
+  background-color: #fff8f0; /* Light warm background color */
+  color: #2c3e50;
   line-height: 1.6;
 }
 
 a {
   text-decoration: none;
-  color: #2c3e50
+  color: #2c3e50;
 }
 
 a:hover {
   color: #e67e22;
 }
 
-/* Header and Navigation */
-/* Chang color and space around text */
+/* === Header and Navigation === */
 #main-header {
-  background-color: #1e272e;
+  background: linear-gradient(90deg, #1e272e, #34495e); /* Gradient background */
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -28,13 +28,15 @@ a:hover {
 
 #main-header h1 {
   margin: 0;
+  font-size: 2.5em; /* Larger font for name */
+  letter-spacing: 1px;
 }
 
 .navbar {
-  background-color: red;
+  background-color: #fcb900; /* Aggie gold */
   padding: 10px 0;
 }
-/* Removes bullet points */
+
 .navbar ul {
   list-style: none;
   display: flex;
@@ -48,36 +50,43 @@ a:hover {
 }
 
 .navbar a {
-  color: white;
+  color: #1e272e; /* Dark text for gold background */
   font-weight: bold;
   transition: color 0.3s ease;
+  font-size: 1.1em;
 }
 
 .navbar a:hover {
-  color: #f39c12;
+  color: #fff; /* White on hover */
 }
 
-/* Main Content */
+/* === Main Content === */
 main {
   padding: 40px 20px;
-  max-width: 900px;
+  max-width: 960px;
   margin: auto;
 }
 
 .intro img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2, h3 {
-  color: #2c3e50;
+  color: #34495e; /* Deep blue headings */
 }
 
-/* Footer */
+.intro p, .info p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* === Footer === */
 #main-footer {
-  background-color: #1e272e;
+  background: linear-gradient(90deg, #1e272e, #34495e);
   color: white;
   text-align: center;
   padding: 20px 10px;
@@ -89,7 +98,7 @@ h2, h3 {
   color: #f1c40f;
 }
 
-/* Gallery Layout */
+/* === Gallery Layout === */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -104,13 +113,16 @@ h2, h3 {
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+
+/* === AJAX Section Styling === */
 .ajax-section {
   text-align: center;
   padding: 1em;
-  background-color: #f9f9f9;
+  background-color: #fff0e6;
   border-top: 1px solid #ddd;
-
 }
+
+/* === Barber Cards Grid === */
 .barber-grid {
   display: flex;
   flex-wrap: wrap;
@@ -124,10 +136,16 @@ h2, h3 {
   border-radius: 10px;
   width: 220px;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #fdfaf6;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 }
 
+.barber-card h4 {
+  color: #1e272e;
+  margin-bottom: 0.5em;
+}
 
-
-
+.barber-card p {
+  font-size: 0.95em;
+  color: #555;
+}
